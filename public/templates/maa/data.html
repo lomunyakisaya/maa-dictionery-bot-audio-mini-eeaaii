@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maa Language Data Collection</title>
+</head>
+<body>
+
+    <h1>Maa Language Data Collection</h1>
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <!-- BASIC LANGUAGE DATA -->
+        <h2>Basic Language Data</h2>
+
+        <label for="word">Maa Word:</label>
+        <input
+            type="text"
+            id="word"
+            name="word"
+            placeholder="Enter a Maa word"
+            required
+        >
+
+        <br><br>
+
+        <label for="meaning">Meaning:</label>
+        <input
+            type="text"
+            id="meaning"
+            name="meaning"
+            placeholder="Enter the meaning"
+            required
+        >
+
+        <br><br>
+
+        <label for="context">Context:</label>
+        <textarea
+            id="context"
+            name="context"
+            placeholder="Describe the context in which the word is used"
+        ></textarea>
+
+        <br><br>
+
+        <label for="part_of_speech">Part of Speech:</label>
+        <select id="part_of_speech" name="part_of_speech">
+            <option value="">Select part of speech</option>
+            <option value="noun">Noun</option>
+            <option value="verb">Verb</option>
+            <option value="adjective">Adjective</option>
+            <option value="adverb">Adverb</option>
+            <option value="pronoun">Pronoun</option>
+            <option value="preposition">Preposition</option>
+            <option value="conjunction">Conjunction</option>
+            <option value="interjection">Interjection</option>
+            <option value="other">Other</option>
+        </select>
+
+        <br><br>
+
+        <!-- TRANSLATIONS -->
+        <h2>Translations</h2>
+
+        <label for="english_translation">English Translation:</label>
+        <input
+            type="text"
+            id="english_translation"
+            name="english_translation"
+            placeholder="Enter English translation"
+        >
+
+        <br><br>
+
+        <label for="swahili_translation">Swahili Translation:</label>
+        <input
+            type="text"
+            id="swahili_translation"
+            name="swahili_translation"
+            placeholder="Enter Swahili translation"
+        >
+
+        <br><br>
+
+        <!-- DIALECT -->
+        <h2>Dialect Information</h2>
+
+        <label for="dialet">Dialect:</label>
+        <input
+            type="text"
+            id="dialet"
+            name="dialet"
+            placeholder="Enter the dialect"
+        >
+
+        <br><br>
+
+        <label for="region">Region:</label>
+        <input
+            type="text"
+            id="region"
+            name="region"
+            placeholder="Enter the region where the word is used"
+        >
+
+        <br><br>
+
+        <!-- AUDIO -->
+        <h2>Audio Recording</h2>
+
+        <label for="audio">Upload Audio:</label>
+        <input
+            type="file"
+            id="audio"
+            name="audio"
+            accept="audio/*"
+        >
+
+        <br><br>
+
+        <!-- DATA SOURCE -->
+        <h2>Contributor Information</h2>
+
+        <label for="contributor_name">Contributor Name:</label>
+        <input
+            type="text"
+            id="contributor_name"
+            name="contributor_name"
+            placeholder="Enter contributor name"
+        >
+
+        <br><br>
+
+        <label for="source">Data Source:</label>
+        <input
+            type="text"
+            id="source"
+            name="source"
+            placeholder="Enter the source of this word"
+        >
+
+        <br><br>
+
+        <button type="submit">Submit Word</button>
+
+        <button type="reset">Clear Form</button>
+
+    </form>
+
+</body>
+</html>
